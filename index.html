@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Mostrar un Saludo según la Hora con Javascript </title>
+
+	  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+
+  </head>
+
+  <body onload="mostrarSaludo()"> 
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="http://nubecolectiva.com"><img src="http://nubecolectiva.com/img/logo.png" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="http://nubecolectiva.com">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://blog.nubecolectiva.com" target="_blank">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://nubecolectiva.com/merchandising/" target="_blank">Merchandising</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li> 
+          </ul>
+          <form name="bencc" method="get" action="http://www.google.com/search" id="bencc" class="form-inline mt-2 mt-md-0" target="_blank">
+            <input type="hidden" name="domains" value="blog.nubecolectiva.com">
+            <input type="hidden" name="sitesearch" value="blog.nubecolectiva.com">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Buscar...">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="document.getElementById('bencc').submit()">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    </header>
+
+    <div class="pccp" align="center">
+        <!-- P -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2390065838671224"
+             data-ad-slot="1441100372"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <!-- End P -->
+    </div>
+
+
+    <main role="main" class="mt-5">
+
+      <section>
+
+        <div class="container text-center">
+
+          <h1>Mostrar un Saludo según la Hora con Javascript </h1>          
+
+          <div id="saludo" class="mb-5 mt-5">
+
+            <img name="tiempo">
+
+            <div id="txtsaludo"></div>
+
+          </div>               
+          
+        </div>
+
+      </section>
+
+
+    <footer class="text-muted">
+      <div align="center">
+	        Desarrollado por <a href="http://www.nubecolectiva.com" target="_blank">Nube Colectiva</a>
+	    </div> 
+    </footer>
+
+      <script crossorigin="anonymous" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+      <!-- Librería Sheet JS y archivo de configuracion app.js -->
+      <script type="text/javascript">
+
+        function mostrarSaludo(){
+
+          fecha = new Date(); 
+          hora = fecha.getHours();
+
+          if(hora >= 0 && hora < 12){
+            texto = "Buenos Días";
+            imagen = "img/dia.png";
+          }
+
+          if(hora >= 12 && hora < 18){
+            texto = "Buenas Tardes";
+            imagen = "img/tarde.png";
+          }
+
+          if(hora >= 18 && hora < 24){
+            texto = "Buenas Noches";
+            imagen = "img/noche.png";
+          }
+
+          document.images["tiempo"].src = imagen;
+
+          document.getElementById('txtsaludo').innerHTML = texto;
+
+        }
+
+      </script>
+
+
+
+    
+  </body>
+</html>
